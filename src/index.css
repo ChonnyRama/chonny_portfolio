@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+
+@theme {
+  --font-code: "Share Tech Mono", serif;
+}
+
+@layer utilities {
+  @keyframes shadow-dance {
+    0% {
+      text-shadow:
+        -5px -5px 0 #00d4ff,
+        -10px -10px 0 #ff005e;
+    }
+    50% {
+      text-shadow:
+        5px 5px 0 #ff005e,
+        10px 10px 0 #00d4ff;
+    }
+  }
+
+  .animate-shadow-dance {
+    animation: shadow-dance 2s ease-in 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply h-[200vh] bg-zinc-900 text-zinc-50;
+}

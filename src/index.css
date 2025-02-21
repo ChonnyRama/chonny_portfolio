@@ -1,9 +1,11 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin 'tailwind-scrollbar';
 
 @theme {
-  --font-code: "Share Tech Mono", serif;
+  --font-code: 'Share Tech Mono', serif;
 }
+
+/* Custom utilities */
 
 @layer utilities {
   @keyframes shadow-dance {
@@ -18,9 +20,41 @@
         10px 10px 0 #00d4ff;
     }
   }
-
   .animate-shadow-dance {
     animation: shadow-dance 2s ease-in 1;
+  }
+
+  .material-symbols-rounded {
+    @apply h-[1-em] w-[1em] overflow-hidden;
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+}
+
+/* Custom Components */
+
+@layer components {
+  .menu-btn {
+    @apply grid h-10 w-10 place-items-center rounded-xl bg-zinc-50/10 ring-1 ring-inset ring-zinc-50/[0.02] backdrop-blur-2xl transition-[transform_background-color] hover:bg-zinc-50/15 active:scale-95;
+  }
+
+  .navbar {
+    @apply invisible absolute right-0 top-full isolate mt-2 min-w-40 scale-50 rounded-2xl bg-zinc-50/10 p-2 opacity-0 ring-1 ring-inset ring-zinc-50/5 blur-sm backdrop-blur-2xl transition-[opacity_transform_filter] md:visible md:static md:mt-0 md:flex md:scale-100 md:items-center md:opacity-100 md:blur-none;
+  }
+
+  .nav-link {
+    @apply grid h-9 items-center px-4 text-sm font-medium tracking-wide text-zinc-50/50 transition-colors hover:text-zinc-50;
+  }
+
+  .btn {
+    @apply flex h-9 max-w-max items-center gap-2 rounded-xl px-4 text-sm font-medium ring-1 ring-inset ring-zinc-50/5 transition-[background-color];
+  }
+
+  .btn-secondary {
+    @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80;
   }
 }
 
@@ -29,5 +63,17 @@ html {
 }
 
 body {
-  @apply h-[200vh] bg-zinc-900 text-zinc-50;
+  @apply bg-zinc-900 text-zinc-50;
+}
+
+.navbar.active {
+  @apply visible scale-100 opacity-100 blur-none;
+}
+
+.nav-link.active {
+  @apply text-zinc-900 duration-500;
+}
+
+.navbar .active-box {
+  @apply absolute -z-10 h-9 rounded-lg bg-zinc-50 transition-[top_left] duration-500;
 }

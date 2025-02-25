@@ -1,4 +1,5 @@
 import SkillCard from './SkillCard';
+import SkillCategory from './SkillCategory';
 
 const frontSkills = [
   {
@@ -19,7 +20,7 @@ const frontSkills = [
   {
     imgSrc: '/skills/atom.png',
     label: 'React',
-    desc: 'Component-Based -UI',
+    desc: 'Component-Based UI',
   },
 
   {
@@ -108,7 +109,7 @@ const devOpsSkills = [
   },
 ];
 
-export default function Skill() {
+export default function Skills() {
   return (
     <section className="section">
       <div className="container">
@@ -116,10 +117,11 @@ export default function Skill() {
         <p className="mb-8 mt-3 max-w-[50ch] text-zinc-400">
           These are the tools that I&apos;ve used in professional evironments and personal projects.
         </p>
-        <div className="grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-3">
-          {frontSkills.map(({ imgSrc, label, desc }, index) => (
-            <SkillCard key={index} imgSrc={imgSrc} label={label} desc={desc} />
-          ))}
+        <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:items-start lg:grid-cols-4">
+          <SkillCategory skillArray={frontSkills} category="Front-end Development" />
+          <SkillCategory skillArray={backSkills} category="Back-end Development" />
+          <SkillCategory skillArray={devOpsSkills} category="DevOps Tools" />
+          <SkillCategory skillArray={cloudSkills} category="Cloud Platforms" />
         </div>
       </div>
     </section>

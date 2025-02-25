@@ -29,8 +29,8 @@ export default function Navbar({ navOpen }) {
       className: 'nav-link',
     },
     {
-      label: 'Work',
-      link: '#work',
+      label: 'Skills',
+      link: '#skills',
       className: 'nav-link',
     },
     {

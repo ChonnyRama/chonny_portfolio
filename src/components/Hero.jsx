@@ -21,7 +21,7 @@ export default function Hero() {
             Building modern websites, one line at a time
           </h2>
           <div className="flex items-center gap-3">
-            <ButtonPrimary label="Download CV" icon="download" />{' '}
+            <ButtonPrimary label="Download CV" icon="download" href="/cv/Chonny_resume.pdf" />
             <ButtonOutline href="#about" label="Learn more" icon="arrow_downward" />
           </div>
         </div>

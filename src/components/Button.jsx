@@ -1,7 +1,18 @@
 import PropTypes from 'prop-types';
 
 export function ButtonPrimary({ href, target = '_self', label, icon, classes }) {
-  if (href) {
+  if (href && label === 'Download CV') {
+    return (
+      <a href={href} target={target} download="Chonny_CV.pdf" className={'btn btn-primary ' + classes}>
+        {label}
+        {icon ? (
+          <span className="material-symbols-rounded" aria-hidden="true">
+            {icon}
+          </span>
+        ) : undefined}
+      </a>
+    );
+  } else if (href) {
     return (
       <a href={href} target={target} className={'btn btn-primary ' + classes}>
         {label}

@@ -1,3 +1,5 @@
+import SkillCard from './SkillCard';
+
 const frontSkills = [
   {
     imgSrc: '/skills/css.png',
@@ -111,6 +113,14 @@ export default function Skill() {
     <section className="section">
       <div className="container">
         <h2 className="headline-2">Essential Tools I use</h2>
+        <p className="mb-8 mt-3 max-w-[50ch] text-zinc-400">
+          These are the tools that I&apos;ve used in professional evironments and personal projects.
+        </p>
+        <div className="grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-3">
+          {frontSkills.map(({ imgSrc, label, desc }, index) => (
+            <SkillCard key={index} imgSrc={imgSrc} label={label} desc={desc} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -27,12 +27,12 @@ export default function Contact() {
   return (
     <section className="mt-20" id="contact">
       <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
-        <div className="mb-12 lg:mb-0 lg:flex lg:flex-col">
+        <div className="mb-4 lg:mb-0 lg:flex lg:flex-col">
           <h2 className="headline-2 lg:max-x-[12ch]">Contact me here!</h2>
-          <p className="mb-8 mt-3 max-w-[50ch] text-zinc-400 lg:max-w-[30ch]">
+          <p className="mb-4 mt-3 max-w-[50ch] text-zinc-400 lg:max-w-[30ch]">
             Reach out today to discuss your project needs and let&apos;s discuss how we can work together!
           </p>
-          <div className="mt-auto flex items-center gap-2">
+          <div className="mb-auto flex items-center gap-2">
             {socialLinks.map(({ href, icon, alt }, index) => (
               <a
                 key={index}

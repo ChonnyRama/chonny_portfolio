@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { FaSquareXTwitter, FaSquareInstagram } from 'react-icons/fa6';
 
 const socialLinks = [
   {
@@ -11,16 +10,6 @@ const socialLinks = [
     href: 'https://www.linkedin.com/in/chonnyrama/',
     icon: <FaLinkedin />,
     alt: 'LinkedIn',
-  },
-  {
-    href: 'https://x.com/ChonnyRama',
-    icon: <FaSquareXTwitter />,
-    alt: 'Twitter X',
-  },
-  {
-    href: 'https://www.instagram.com/chonnyrama/',
-    icon: <FaSquareInstagram />,
-    alt: 'Instagram',
   },
 ];
 export default function Contact() {

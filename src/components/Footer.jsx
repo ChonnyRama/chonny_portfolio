@@ -1,4 +1,3 @@
-import React from 'react';
 import { ButtonPrimary } from './Button';
 
 const sitemap = [
@@ -29,14 +28,6 @@ const socials = [
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/chonnyrama/',
   },
-  {
-    label: 'Twitter X',
-    href: 'https://x.com/ChonnyRama',
-  },
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/chonnyrama/',
-  },
 ];
 
 export default function Footer() {
@@ -46,7 +37,7 @@ export default function Footer() {
         <div className="container">
           <div className="lg:grid lg:grid-cols-2">
             <div className="mb-10">
-              <h2 className="headline-1 mb-8 lg:max-w-[12ch]">Work with me Today!</h2>
+              <h2 className="headline-1 mb-8 lg:max-w-[12ch]">Work with me today!</h2>
               <ButtonPrimary href="mailto:johnnyramartin@gmail.com" label="Start project" icon="chevron_right" />
             </div>
             <div className="grid grid-cols-2 gap-4 lg:pl-20">

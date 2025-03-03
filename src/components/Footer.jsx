@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="lg:grid lg:grid-cols-2">
             <div className="mb-10">
               <h2 className="headline-1 mb-8 lg:max-w-[12ch]">Work with me today!</h2>
-              <ButtonPrimary href="mailto:johnnyramartin@gmail.com" label="Start project" icon="chevron_right" />
+              <ButtonPrimary href="mailto:johnnyramartin@gmail.com" label="Send an email" icon="chevron_right" />
             </div>
             <div className="grid grid-cols-2 gap-4 lg:pl-20">
               <div>

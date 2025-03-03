@@ -113,7 +113,7 @@ export default function Skills() {
   return (
     <section className="section" id="skills">
       <div className="container">
-        <h2 className="headline-2">Essential Tools I use</h2>
+        <h2 className="headline-2">My Technical Toolkit</h2>
         <p className="mb-8 mt-3 max-w-[50ch] text-zinc-400">
           These are the tools that I&apos;ve used in professional evironments and personal projects.
         </p>

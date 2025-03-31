@@ -24,7 +24,7 @@ export default function SkillCategory({ skillArray, category }) {
         {category}
       </h3>
       <div
-        className={`grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-2 overflow-hidden transition-[opacity,max-height] duration-500 ease-in-out ${isVisible ? 'max-h-100 opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-2 overflow-hidden transition-[opacity,max-height] duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'max-h-0 opacity-0'}`}
       >
         {skillArray.map(({ imgSrc, label, desc }, index) => (
           <SkillCard

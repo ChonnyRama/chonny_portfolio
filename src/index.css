@@ -64,6 +64,10 @@
   .headline-1 {
     @apply text-5xl font-semibold leading-tight lg:text-[55px] lg:leading-[1.15];
   }
+
+  .title-1 {
+    @apply text-[22px] font-normal;
+  }
 }
 
 /* Custom Components */

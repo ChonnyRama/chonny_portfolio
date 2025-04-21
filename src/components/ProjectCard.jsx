@@ -1,7 +1,8 @@
-import React from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export default function ProjectCard({ imgSrc, title, tags, projectLink, classes }) {
+export default function ProjectCard({ imgSrc, imgSrcHover, title, tags, projectLink, classes }) {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div
       className={
@@ -9,8 +10,12 @@ export default function ProjectCard({ imgSrc, title, tags, projectLink, classes 
         classes
       }
     >
-      <figure className="img-box mb-4 aspect-square rounded-lg">
-        <img src={imgSrc} alt={title} loading="lazy" className="img-cover" />
+      <figure
+        className="img-box mb-4 rounded-lg"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <img src={isHovered ? imgSrcHover : imgSrc} alt={title} loading="lazy" className="img-contain" />
       </figure>
       <div className="flex items-center justify-between">
         <div>
@@ -23,19 +28,24 @@ export default function ProjectCard({ imgSrc, title, tags, projectLink, classes 
             ))}
           </div>
         </div>
-        <div className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-sky-400 text-zinc-950">
+        <a
+          href={projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-sky-400 text-zinc-950"
+        >
           <span className="material-symbols-rounded" aria-hidden="true">
             arrow_outward
           </span>
-        </div>
+        </a>
       </div>
-      <a href={projectLink} className="absolute inset-0" target="_blank"></a>
     </div>
   );
 }
 
 ProjectCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
+  imgSrcHover: PropTypes.string,
   title: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
   projectLink: PropTypes.string,

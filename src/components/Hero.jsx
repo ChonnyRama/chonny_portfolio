@@ -18,7 +18,7 @@ export default function Hero() {
             </div>
           </div>
           <h2 className="headline-1 mb-8 mt-5 max-w-[15ch] sm:max-w-[5ch] lg:mb-10 lg:max-w-[15ch]">
-            Building modern websites, one line at a time
+            Crafting modern websites, one line at a time
           </h2>
           <div className="flex items-center gap-3">
             <ButtonPrimary label="Download CV" icon="download" href="/cv/Chonny_resume.pdf" />
